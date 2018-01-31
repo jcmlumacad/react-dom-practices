@@ -1,9 +1,9 @@
-import App from './app'
-import http from 'http'
+import { App } from './app'
+import { createServer } from 'http'
 
 class Server {
-  run (app) {
-    const server = http.createServer(app)
+  constructor (app) {
+    const server = createServer(app)
     const port = process.env.NODE_PORT || 3000
 
     server.listen(port, () => {
@@ -12,8 +12,4 @@ class Server {
   }
 }
 
-const app = new App()
-const _server = new Server()
-let server = _server.run(app.activate())
-
-export default server
+export const server = new Server(App())

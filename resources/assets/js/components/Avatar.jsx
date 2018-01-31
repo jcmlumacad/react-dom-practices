@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class Avatar extends React.Component {
+class Avatar extends Component {
   render () {
     return <img className='Avatar'
       src={this.props.user.avatarUrl}

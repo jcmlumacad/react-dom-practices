@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from 'react'
+import FormattedDate from '@component/FormattedDate'
 
-class Clock extends React.Component {
+class Clock extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -29,25 +29,10 @@ class Clock extends React.Component {
     return (
       <div>
         {/* <h1>Hello, world!</h1> */}
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        <FormattedDate date={this.state.date} />
       </div>
     )
   }
 }
 
-class App extends React.Component {
-  render () {
-    return (
-      <div>
-        <Clock />
-        <Clock />
-        <Clock />
-      </div>
-    )
-  }
-}
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-)
+export default Clock

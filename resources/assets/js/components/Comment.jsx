@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { UserInfo } from './UserInfo'
 import { CommentText } from './CommentText'
 import { CommentDate } from './CommentDate'
 
-class Comment extends React.Component {
+class Comment extends Component {
   render () {
     return (
       <div className='Comment'>

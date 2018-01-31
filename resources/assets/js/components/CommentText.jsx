@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class CommentText extends React.Component {
+class CommentText extends Component {
   render () {
     return <div className='Comment-text'>{this.props.text}</div>
   }

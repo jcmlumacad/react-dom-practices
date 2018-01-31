@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class CommentDate extends React.Component {
+class CommentDate extends Component {
   formatDate (date) {
     console.log('date', date)
   }
