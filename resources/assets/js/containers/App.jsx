@@ -4,6 +4,7 @@ import Toggle from '@component/Toggle'
 import Login from '@component/Login'
 import Logout from '@component/Logout'
 import Greeting from '@component/Greeting'
+import NumberList from '@component/NumberList'
 
 class App extends Component {
   constructor (props) {
@@ -30,12 +31,7 @@ class App extends Component {
   }
 
   render () {
-    // let button
-    // if (this.state.isLoggedIn) {
-    //   button = <Logout handleClick={this.handleClick} />
-    // } else {
-    //   button = <Login handleClick={this.handleClick} />
-    // }
+    const numbers = [0, 2, 4, 6, 8]
     return (
       <div>
         <Clock />
@@ -48,7 +44,7 @@ class App extends Component {
         {this.state.isLoggedIn
           ? (<Logout handleClick={this.handleClick} />)
           : (<Login handleClick={this.handleClick} />)}
-        {/*! this.state.isLoggedIn && <Login handleClick={this.handleClick} /> */}
+        <NumberList numbers={numbers} />
       </div>
     )
   }
