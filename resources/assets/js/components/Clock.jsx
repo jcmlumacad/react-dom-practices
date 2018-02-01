@@ -26,12 +26,7 @@ class Clock extends Component {
   }
 
   render () {
-    return (
-      <div>
-        {/* <h1>Hello, world!</h1> */}
-        <FormattedDate date={this.state.date} />
-      </div>
-    )
+    return <FormattedDate date={this.state.date} />
   }
 }
 

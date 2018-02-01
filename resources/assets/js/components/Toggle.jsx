@@ -18,7 +18,7 @@ class Toggle extends Component {
 
   render () {
     return (
-      <a href='#' onClick={this.handleClick}>{this.state.isToggleOn ? 'ON' : 'OFF'}</a>
+      <button className='btn btn-primary' onClick={this.handleClick}>{this.state.isToggleOn ? 'ON' : 'OFF'}</button>
     )
   }
 }
