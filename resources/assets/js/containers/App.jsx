@@ -85,6 +85,56 @@ class App extends Component {
               </p>
             </FancyBorder>
           </Card>
+
+          <Card header='Product' borderName='dark'>
+            <fieldset>
+              <div className='form-group'>
+                <input type='text' placeholder='Search ...' value='' className='form-control' />
+                <input type='checkbox' /> Only shows products in stock
+              </div>
+            </fieldset>
+            <div>
+              <table className='table table-bordered table-hover'>
+                <thead>
+                  <th>Name</th>
+                  <th>Price</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colSpan='2'><b>Sporting Goods</b></td>
+                  </tr>
+                  <tr>
+                    <td>Football</td>
+                    <td>$ 49.99</td>
+                  </tr>
+                  <tr>
+                    <td>Baseball</td>
+                    <td>$ 9.99</td>
+                  </tr>
+                  <tr>
+                    <td>Basketball</td>
+                    <td>$ 29.99</td>
+                  </tr>
+                  <tr>
+                    <td><b>Electronics</b></td>
+                    <td />
+                  </tr>
+                  <tr>
+                    <td>iPod Touch</td>
+                    <td>$ 99.99</td>
+                  </tr>
+                  <tr>
+                    <td>iPhone 5</td>
+                    <td>$ 399.99</td>
+                  </tr>
+                  <tr>
+                    <td>Nexus 7</td>
+                    <td>$ 199.99</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Card>
         </div>
       </div>
     )
