@@ -32,19 +32,17 @@ class ProductTable extends Component {
     })
 
     return (
-      <div>
-        <table className='table table-bordered table-hover'>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows}
-          </tbody>
-        </table>
-      </div>
+      <table className='table table-bordered table-hover'>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows}
+        </tbody>
+      </table>
     )
   }
 }
