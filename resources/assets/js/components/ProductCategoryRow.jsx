@@ -5,11 +5,11 @@ class ProductCategoryRow extends Component {
   render () {
     const name = this.props.name
     return (
-      <div className='row'>
-        <div className='col text-center font-weight-bold border border-primary'>
-          {name}
-        </div>
-      </div>
+      <tr>
+        <td colSpan='2'>
+          <b>{name}</b>
+        </td>
+      </tr>
     )
   }
 }

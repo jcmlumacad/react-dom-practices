@@ -7,10 +7,10 @@ class ProductRow extends Component {
     const name = product.name
     const price = product.price
     return (
-      <div className='row'>
-        <div className='col border border-primary'>{name}</div>
-        <div className='col border border-primary'>{price}</div>
-      </div>
+      <tr>
+        <td>{name}</td>
+        <td>{price}</td>
+      </tr>
     )
   }
 }

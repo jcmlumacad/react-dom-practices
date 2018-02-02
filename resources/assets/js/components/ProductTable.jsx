@@ -9,38 +9,42 @@ class ProductTable extends Component {
   render () {
     const filter = this.props.filter
     const products = this.props.productLists
-    const filteredProducts = _.filter(products, item => item.name.includes(filter.name) && item.stocked === filter.hasStock)
+    // const filteredProducts = _.filter(products, item => item.name.includes(filter.name) && item.stocked === filter.hasStock)
+
+    let rows = []
+    let lastCategory = null
+
+    _.forEach(products, (product, key) => {
+      if (filter.hasStock && filter.hasStock !== product.stocked) return null
+
+      if (!product.name.includes(filter.name)) return null
+
+      if (lastCategory !== product.category) {
+        rows.push(
+          <ProductCategoryRow name={product.category} key={'category-' + key} />
+        )
+      }
+
+      rows.push(
+        <ProductRow product={product} key={'product-' + key} />
+      )
+
+      lastCategory = product.category
+    })
+
     return (
-      <div className='container'>
-        <div className='product-header row'>
-          <div className='col border border-primary'>
-            <b>Name</b>
-          </div>
-          <div className='col border border-primary'>
-            <b>Price</b>
-          </div>
-        </div>
-        <div className='product-body'>
-          {filteredProducts.map((filteredProduct, key) => {
-            if (!key) {
-              return (
-                <div>
-                  <ProductCategoryRow name={filteredProduct.category} key={'category-' + key} />
-                  <ProductRow product={filteredProduct} key={'product-' + key} />
-                </div>
-              )
-            }
-            if (filteredProduct.category !== filteredProducts[key - 1].category) {
-              return (
-                <div>
-                  <ProductCategoryRow name={filteredProduct.category} key={'category-' + key} />
-                  <ProductRow product={filteredProduct} key={'product-' + key} />
-                </div>
-              )
-            }
-            return <ProductRow product={filteredProduct} key={'product-' + key} />
-          })}
-        </div>
+      <div>
+        <table className='table table-bordered table-hover'>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows}
+          </tbody>
+        </table>
       </div>
     )
   }
