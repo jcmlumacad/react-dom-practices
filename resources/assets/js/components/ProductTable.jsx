@@ -9,7 +9,6 @@ class ProductTable extends Component {
   render () {
     const filter = this.props.filter
     const products = this.props.productLists
-    // const filteredProducts = _.filter(products, item => item.name.includes(filter.name) && item.stocked === filter.hasStock)
 
     let rows = []
     let lastCategory = null
