@@ -13,7 +13,7 @@ module.exports = {
     publicPath: 'dist'
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.json'],
     modules: ['node_modules'],
     alias: {
       '@component': path.resolve(__dirname, './resources/assets/js/components')

@@ -4,5 +4,11 @@
     "stage-2",
     "react"
   ],
-  "plugins": ["transform-class-properties"]
+  "plugins": [
+    "transform-class-properties",
+    ["babel-plugin-root-import", [{
+      "rootPathPrefix": "~",
+      "rootPathSuffix": "./"
+    }]]
+  ]
 }

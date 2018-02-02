@@ -11,6 +11,8 @@ import NameForm from '@component/NameForm'
 import Calculator from '@component/Calculator'
 import FancyBorder from '@component/FancyBorder'
 import Card from '@component/Card'
+import FilterableProductTable from '@component/FilterableProductTable'
+import products from '~/storage/products'
 
 class App extends Component {
   constructor (props) {
@@ -38,14 +40,6 @@ class App extends Component {
 
   render () {
     const numbers = [0, 2, 4, 6, 8]
-    const products = [
-      {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
-      {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
-      {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
-      {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
-      {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
-      {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
-    ]
     return (
       <div>
         <Navbar />
@@ -56,33 +50,26 @@ class App extends Component {
             <Clock />
             <Clock />
           </Card>
-
           <Card header='Click' borderName='primary'>
             <button onClick={this.handleClickMe} className='btn btn-default'>Click me!!</button>
           </Card>
-
           <Card header='Toggle' borderName='primary'>
             <Toggle />
           </Card>
-
           <Card header={<Greeting isLoggedIn={this.state.isLoggedIn} />} borderName='primary'>
             {this.state.isLoggedIn
               ? (<Logout handleClick={this.handleClick} />)
               : (<Login handleClick={this.handleClick} />)}
           </Card>
-
           <Card header='Number List' borderName='success'>
             <NumberList numbers={numbers} />
           </Card>
-
           <Card header='Form' borderName='info'>
             <NameForm />
           </Card>
-
           <Card header='Calculator' borderName='danger'>
             <Calculator />
           </Card>
-
           <Card header='Fancy Border' borderName='primary'>
             <FancyBorder color='blue'>
               <h1 className='Dialog-title'>
@@ -93,66 +80,8 @@ class App extends Component {
               </p>
             </FancyBorder>
           </Card>
-
           <Card header='Product' borderName='dark'>
-            <fieldset>
-              <div className='form-group'>
-                <input type='text' placeholder='Search ...' value='' className='form-control' />
-                <input type='checkbox' /> Only shows products in stock
-              </div>
-            </fieldset>
-            <div>
-              <table className='table table-bordered table-hover'>
-                <thead>
-                  <th>Name</th>
-                  <th>Price</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td colSpan='2'>
-                      <center>
-                        <b>
-                          Sporting Goods
-                        </b>
-                      </center>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Football</td>
-                    <td>$ 49.99</td>
-                  </tr>
-                  <tr>
-                    <td>Baseball</td>
-                    <td>$ 9.99</td>
-                  </tr>
-                  <tr>
-                    <td>Basketball</td>
-                    <td>$ 29.99</td>
-                  </tr>
-                  <tr>
-                    <td colSpan='2'>
-                      <center>
-                        <b>
-                          Electronics
-                        </b>
-                      </center>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>iPod Touch</td>
-                    <td>$ 99.99</td>
-                  </tr>
-                  <tr>
-                    <td>iPhone 5</td>
-                    <td>$ 399.99</td>
-                  </tr>
-                  <tr>
-                    <td>Nexus 7</td>
-                    <td>$ 199.99</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <FilterableProductTable products={products} />
           </Card>
         </div>
       </div>
