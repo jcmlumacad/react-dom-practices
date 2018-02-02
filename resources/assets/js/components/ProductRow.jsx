@@ -6,10 +6,11 @@ class ProductRow extends Component {
     const product = this.props.product
     const name = product.name
     const price = product.price
+    let stockClass = product.stocked === false ? 'text-danger' : ''
     return (
       <tr>
-        <td>{name}</td>
-        <td>{price}</td>
+        <td className={stockClass}>{name}</td>
+        <td className={stockClass}>{price}</td>
       </tr>
     )
   }
