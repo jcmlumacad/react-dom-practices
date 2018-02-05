@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Toggle extends Component {
+export default class Toggle extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -22,5 +22,3 @@ class Toggle extends Component {
     )
   }
 }
-
-export default Toggle

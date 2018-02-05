@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class FancyBorder extends Component {
+export default class FancyBorder extends Component {
   render () {
     return (
       <div className={'FancyBorder FancyBorder-' + this.props.color}>
@@ -15,5 +15,3 @@ FancyBorder.propTypes = {
   color: PropTypes.string,
   children: PropTypes.array
 }
-
-export default FancyBorder

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import SearchBar from '@component/SearchBar'
 import ProductTable from '@component/ProductTable'
 
-class FilterableProductTable extends Component {
+export default class FilterableProductTable extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -48,5 +48,3 @@ class FilterableProductTable extends Component {
 FilterableProductTable.propTypes = {
   products: PropTypes.array
 }
-
-export default FilterableProductTable

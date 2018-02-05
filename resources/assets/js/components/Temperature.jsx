@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class Temperature extends Component {
+export default class Temperature extends Component {
   constructor (props) {
     super(props)
     this.scales = {
@@ -36,5 +36,3 @@ Temperature.propTypes = {
   temperature: PropTypes.string,
   onTemperatureChange: PropTypes.func
 }
-
-export default Temperature

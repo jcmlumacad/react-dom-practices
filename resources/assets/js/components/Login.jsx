@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class Login extends Component {
+export default class Login extends Component {
   render () {
     return (
       <button onClick={this.props.handleClick} className='btn btn-info'>
@@ -14,5 +14,3 @@ class Login extends Component {
 Login.propTypes = {
   handleClick: PropTypes.func
 }
-
-export default Login

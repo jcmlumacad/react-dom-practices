@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class SearchBar extends Component {
+export default class SearchBar extends Component {
   constructor (props) {
     super(props)
     this.handleSearchChanged = this.handleSearchChanged.bind(this)
@@ -39,5 +39,3 @@ SearchBar.propTypes = {
   onStockChanged: PropTypes.func,
   filter: PropTypes.object
 }
-
-export default SearchBar

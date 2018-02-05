@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import swal from 'sweetalert'
 
-class NameForm extends Component {
+export default class NameForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -33,5 +33,3 @@ class NameForm extends Component {
     )
   }
 }
-
-export default NameForm

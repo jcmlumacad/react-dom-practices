@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class CommentText extends Component {
+export default class CommentText extends Component {
   render () {
     return <div className='Comment-text'>{this.props.text}</div>
   }
@@ -10,5 +10,3 @@ class CommentText extends Component {
 CommentText.propTypes = {
   text: PropTypes.string
 }
-
-export default CommentText

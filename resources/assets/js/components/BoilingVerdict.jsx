@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class BoilingVerdict extends Component {
+export default class BoilingVerdict extends Component {
   render () {
     if (this.props.celsius >= 100) {
       return <p>The water would boil.</p>
@@ -14,5 +14,3 @@ class BoilingVerdict extends Component {
 BoilingVerdict.propTypes = {
   celsius: PropTypes.number
 }
-
-export default BoilingVerdict

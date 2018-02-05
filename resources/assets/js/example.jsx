@@ -1,6 +1,8 @@
-import React from 'react'
+import 'bootstrap'
+
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { Comment } from './components/Comment'
+import Comment from '@component/example/Comment'
 
 const comment = {
   date: new Date(),
@@ -11,13 +13,10 @@ const comment = {
   }
 }
 
-class App extends React.Component {
+class App extends Component {
   render () {
     return (
-      <Comment
-        text={comment.text}
-        date={comment.date}
-        author={comment.author} />
+      <Comment {...comment} />
     )
   }
 }

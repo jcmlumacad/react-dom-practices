@@ -3,21 +3,20 @@ import PropTypes from 'prop-types'
 
 class ProductRow extends Component {
   render () {
-    const product = this.props.product
-    const name = product.name
-    const price = product.price
-    let stockClass = product.stocked === false ? 'text-danger' : ''
+    let stockClass = this.props.stocked === false ? 'text-danger' : ''
     return (
       <tr>
-        <td className={stockClass}>{name}</td>
-        <td className={stockClass}>{price}</td>
+        <td className={stockClass}>{this.props.name}</td>
+        <td className={stockClass}>{this.props.price}</td>
       </tr>
     )
   }
 }
 
 ProductRow.propTypes = {
-  product: PropTypes.object
+  name: PropTypes.string,
+  price: PropTypes.string,
+  stocked: PropTypes.bool
 }
 
 export default ProductRow

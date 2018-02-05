@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { UserInfo } from './UserInfo'
-import { CommentText } from './CommentText'
-import { CommentDate } from './CommentDate'
+import UserInfo from '@component/example/UserInfo'
+import CommentText from '@component/example/CommentText'
+import CommentDate from '@component/example/CommentDate'
 
-class Comment extends Component {
+export default class Comment extends Component {
   render () {
     return (
       <div className='Comment'>
-        <UserInfo user={this.props.author} />
+        <UserInfo {...this.props.author} />
         <CommentText text={this.props.text} />
         <CommentDate date={this.props.date} />
       </div>
@@ -21,5 +21,3 @@ Comment.propTypes = {
   text: PropTypes.string,
   date: PropTypes.instanceOf(Date)
 }
-
-export default Comment

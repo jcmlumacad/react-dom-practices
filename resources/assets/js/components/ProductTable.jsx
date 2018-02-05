@@ -25,7 +25,7 @@ class ProductTable extends Component {
       }
 
       rows.push(
-        <ProductRow product={product} key={'product-' + key} />
+        <ProductRow {...product} key={'product-' + key} />
       )
 
       lastCategory = product.category

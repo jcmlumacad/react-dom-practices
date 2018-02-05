@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import UserGreeting from '@component/UserGreeting'
 import GuestGreeting from '@component/GuestGreeting'
 
-class Greeting extends Component {
+export default class Greeting extends Component {
   render () {
     if (this.props.isLoggedIn) {
       return (
@@ -20,5 +20,3 @@ class Greeting extends Component {
 Greeting.propTypes = {
   isLoggedIn: PropTypes.bool
 }
-
-export default Greeting

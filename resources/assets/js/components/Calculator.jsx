@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import BoilingVerdict from '@component/BoilingVerdict'
 import Temperature from '@component/Temperature'
 
-class Calculator extends Component {
+export default class Calculator extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -53,5 +53,3 @@ class Calculator extends Component {
     )
   }
 }
-
-export default Calculator

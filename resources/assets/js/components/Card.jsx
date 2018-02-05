@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class Card extends Component {
+export default class Card extends Component {
   render () {
     return (
       <div className={'card mb-3 border-' + this.props.borderName}>
@@ -36,5 +36,3 @@ Card.propTypes = {
     PropTypes.array
   ])
 }
-
-export default Card

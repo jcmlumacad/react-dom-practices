@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class Logout extends Component {
+export default class Logout extends Component {
   render () {
     return (
       <button onClick={this.props.handleClick} className='btn btn-danger'>
@@ -14,5 +14,3 @@ class Logout extends Component {
 Logout.propTypes = {
   handleClick: PropTypes.func
 }
-
-export default Logout

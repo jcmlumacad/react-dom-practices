@@ -12,9 +12,10 @@ import Calculator from '@component/Calculator'
 import FancyBorder from '@component/FancyBorder'
 import Card from '@component/Card'
 import FilterableProductTable from '@component/FilterableProductTable'
+import { DatePicker, DatePicker2 } from '@component/MyComponents'
 import products from '~/storage/products'
 
-class App extends Component {
+export default class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -40,6 +41,7 @@ class App extends Component {
 
   render () {
     const numbers = [0, 2, 4, 6, 8]
+
     return (
       <div>
         <Navbar />
@@ -83,10 +85,12 @@ class App extends Component {
           <Card header='Product' borderName='dark'>
             <FilterableProductTable products={products} />
           </Card>
+          <Card header='Date Picker' borderName='danger'>
+            <DatePicker color='blue' />
+            <DatePicker2 color='red' />
+          </Card>
         </div>
       </div>
     )
   }
 }
-
-export default App
